@@ -1,6 +1,6 @@
 import java.util.*
 
-fun main() {
+fun mainOne() {
     val sc = Scanner(System.`in`)
 
     val teamA = sc.nextLine().split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
@@ -16,4 +16,11 @@ fun main() {
         score -= teamB[i].toInt()
     }
     println("No")
+}
+
+fun main() {
+    fun solution(n: Long): IntArray {
+        return n.toString().reversed().map { it.toString().toInt() }.toIntArray()
+    }
+    println(solution(12345).joinToString(""))
 }
