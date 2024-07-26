@@ -40,4 +40,6 @@ class Solution {
 
         return array.map { it.toList() }.flatten().subList(left.toInt(), right.toInt()).toIntArray()
     }
+
 }
+

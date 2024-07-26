@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class CodingTestJava {
     public static int[] solution(long n) {
         //문자열로 변환하여 거꾸로 뒤집는다.
@@ -8,5 +10,13 @@ public class CodingTestJava {
             result[i] = Character.getNumericValue(reversedString.charAt(i));
         }
         return result;
+    }
+
+    public boolean solution(String[] phoneBook) {
+        Arrays.sort(phoneBook);
+        for (int i = 0; i < phoneBook.length - 1; i++)
+            if (phoneBook[i + 1].startsWith(phoneBook[i]))
+                return false;
+        return true;
     }
 }
