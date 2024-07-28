@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d04efc59-f7df-47b4-bc3c-f1af96871f10" name="변경" comment="프로그래머스 - n * n 배열 자르기">
+    <list default="true" id="d04efc59-f7df-47b4-bc3c-f1af96871f10" name="변경" comment="프로그래머스 - 전화번호 목록">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodingTestJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodingTestJava.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodingTestKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodingTestKotlin.kt" afterDir="false" />
@@ -121,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721738403137</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="프로그래머스 - 전화번호 목록">
+      <option name="closed" value="true" />
+      <created>1721998122126</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721998122126</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,6 +137,7 @@
     <MESSAGE value="백준 - 오늘도 졌다" />
     <MESSAGE value="프로그래머스 - 자연수 뒤집어 배열로 만들기 풀이" />
     <MESSAGE value="프로그래머스 - n * n 배열 자르기" />
-    <option name="LAST_COMMIT_MESSAGE" value="프로그래머스 - n * n 배열 자르기" />
+    <MESSAGE value="프로그래머스 - 전화번호 목록" />
+    <option name="LAST_COMMIT_MESSAGE" value="프로그래머스 - 전화번호 목록" />
   </component>
 </project>

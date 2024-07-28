@@ -43,3 +43,25 @@ class Solution {
 
 }
 
+
+
+fun solution(n: Int): Array<IntArray?> {
+    val resultList = mutableListOf<IntArray>()
+
+    fun hanoi(n: Int, start: Int, middle: Int, end: Int) {
+        if (n == 1) {
+            resultList.add(intArrayOf(start, end))
+            return
+        }
+
+        hanoi(n - 1, start, end, middle) //middle을 일단 목적지로
+
+        resultList.add(intArrayOf(start, end))
+
+        hanoi(n - 1, middle, start, end)
+    }
+
+    hanoi(n, 1, 2, 3)
+
+    return resultList.toTypedArray()
+}

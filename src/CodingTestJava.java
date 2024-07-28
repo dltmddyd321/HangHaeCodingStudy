@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CodingTestJava {
     public static int[] solution(long n) {
@@ -18,5 +20,33 @@ public class CodingTestJava {
             if (phoneBook[i + 1].startsWith(phoneBook[i]))
                 return false;
         return true;
+    }
+
+    private static List<int[]> resultList;
+
+    public static void hanoi(int n, int start, int middle, int end) {
+        if (n == 1) {
+            resultList.add(new int[]{start, end});
+            return;
+        }
+
+        hanoi(n - 1, start, end, middle); //middle을 일단 목적지로
+
+        resultList.add(new int[]{start, end});
+
+        hanoi(n - 1, middle, start, end);
+    }
+
+    public static int[][] solution(int n) {
+
+        resultList = new ArrayList<>();
+        hanoi(n, 1, 2, 3);
+
+        int[][] answer = new int[resultList.size()][];
+        for (int i = 0; i < resultList.size(); i++) {
+            answer[i] = resultList.get(i);
+        }
+
+        return answer;
     }
 }
