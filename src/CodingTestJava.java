@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 public class CodingTestJava {
     public static int[] solution(long n) {
@@ -48,5 +49,36 @@ public class CodingTestJava {
         }
 
         return answer;
+    }
+
+    public int[] solution(int[] progresses, int[] speeds) {
+        int[] daysToComplete = new int[progresses.length];
+
+        for (int i = 0; i < progresses.length; i ++) {
+            int needCheck = 100 - progresses[i];
+            daysToComplete[i] = (needCheck % speeds[i] == 0) ? (needCheck / speeds[i]) : (needCheck / speeds[i] + 1);
+        }
+
+        List<Integer> result = new ArrayList<>();
+        int maxDays = daysToComplete[0];
+        int cnt = 1;
+
+        for (int i = 1; i < progresses.length; i ++) {
+            if (daysToComplete[i] <= maxDays) {
+                cnt ++; //기존 값을 축적
+            } else { //더 큰 값이므로 여태까지는 저장해두고, 새로운 카운트 시작
+                result.add(cnt);
+                maxDays = daysToComplete[i];
+                cnt = 1;
+            }
+        }
+        result.add(cnt);
+
+        int[] res = new int[result.size()];
+        for (int i = 0; i < result.size(); i ++) {
+            res[i] = result.get(i);
+        }
+
+        return res;
     }
 }
