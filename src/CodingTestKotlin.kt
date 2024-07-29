@@ -1,6 +1,7 @@
 import java.util.*
 import kotlin.math.max
 
+
 fun mainOne() {
     val sc = Scanner(System.`in`)
 
@@ -95,4 +96,41 @@ fun solution(progresses: IntArray, speeds: IntArray): IntArray {
     }
 
     return res
+}
+
+fun solution222(progresses: IntArray, speeds: IntArray): IntArray {
+    val n = progresses.size
+    val daysToComplete = IntArray(n)
+
+    // 각 작업이 완료되기까지 걸리는 일수를 계산
+    for (i in 0 until n) {
+        val remainingProgress = 100 - progresses[i]
+        daysToComplete[i] =
+            if ((remainingProgress % speeds[i] == 0)) (remainingProgress / speeds[i]) else (remainingProgress / speeds[i] + 1)
+    }
+
+    val result: MutableList<Int> = ArrayList()
+    val queue: Queue<Int> = LinkedList()
+
+    queue.offer(daysToComplete[0])
+    var cnt = 1
+
+    for (i in 1 until n) {
+        if (daysToComplete[i] <= queue.peek()) {
+            cnt++ // 기존 값을 축적
+        } else { // 더 큰 값이므로 여태까지는 저장해두고, 새로운 카운트 시작
+            result.add(cnt)
+            queue.poll() // 큐에서 제거
+            queue.offer(daysToComplete[i]) // 큐에 현재 값을 추가
+            cnt = 1
+        }
+    }
+    result.add(cnt) // 마지막 카운트 추가
+
+    val resultArray = IntArray(result.size)
+    for (i in result.indices) {
+        resultArray[i] = result[i]
+    }
+
+    return resultArray
 }

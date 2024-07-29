@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class CodingTestJava {
     public static int[] solution(long n) {
@@ -51,7 +48,7 @@ public class CodingTestJava {
         return answer;
     }
 
-    public int[] solution(int[] progresses, int[] speeds) {
+    public int[] solution1(int[] progresses, int[] speeds) {
         int[] daysToComplete = new int[progresses.length];
 
         for (int i = 0; i < progresses.length; i ++) {
@@ -80,5 +77,43 @@ public class CodingTestJava {
         }
 
         return res;
+    }
+
+    public int[] solution2(int[] progresses, int[] speeds) {
+        int n = progresses.length;
+        int[] daysToComplete = new int[n];
+
+        // 각 작업이 완료되기까지 걸리는 일수를 계산
+        for (int i = 0; i < n; i++) {
+            int remainingProgress = 100 - progresses[i];
+            daysToComplete[i] = (remainingProgress % speeds[i] == 0) ?
+                    (remainingProgress / speeds[i]) :
+                    (remainingProgress / speeds[i] + 1);
+        }
+
+        List<Integer> result = new ArrayList<>();
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.offer(daysToComplete[0]);
+        int cnt = 1;
+
+        for (int i = 1; i < n; i++) {
+            if (queue.peek() != null && daysToComplete[i] <= queue.peek()) {
+                cnt++; // 기존 값을 축적
+            } else { // 더 큰 값이므로 여태까지는 저장해두고, 새로운 카운트 시작
+                result.add(cnt);
+                queue.poll(); // 큐에서 제거
+                queue.offer(daysToComplete[i]); // 큐에 현재 값을 추가
+                cnt = 1;
+            }
+        }
+        result.add(cnt); // 마지막 카운트 추가
+
+        int[] resultArray = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            resultArray[i] = result.get(i);
+        }
+
+        return resultArray;
     }
 }
