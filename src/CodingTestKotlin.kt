@@ -98,6 +98,23 @@ fun solution(progresses: IntArray, speeds: IntArray): IntArray {
     return res
 }
 
+fun solution(cards1: Array<String>, cards2: Array<String>, goal: Array<String>): String {
+    var firstIndex = 0
+    var secondIndex = 0
+
+    for (word in goal) {
+        if (firstIndex < cards1.size && word == cards1[firstIndex]) {
+            firstIndex++
+        } else if (secondIndex < cards2.size && word == cards2[secondIndex]) {
+            secondIndex++
+        } else {
+            return "No"
+        }
+    }
+
+    return "Yes"
+}
+
 fun solution222(progresses: IntArray, speeds: IntArray): IntArray {
     val n = progresses.size
     val daysToComplete = IntArray(n)

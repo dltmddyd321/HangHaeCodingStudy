@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d04efc59-f7df-47b4-bc3c-f1af96871f10" name="변경" comment="프로그래머스 - 기능 개발 풀이">
+    <list default="true" id="d04efc59-f7df-47b4-bc3c-f1af96871f10" name="변경" comment="프로그래머스 - 큐를 활용한 기능 개발 풀이">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodingTestJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodingTestJava.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodingTestKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodingTestKotlin.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,18 +47,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.MainKt.executor": "Run",
-    "Notification.DisplayName-DoNotAsk-Vcs Notifications": "VCS 알림",
-    "Notification.DoNotAsk-Vcs Notifications": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/psych/IdeaProjects/HangHaeCodingStudy/src/Main.kt",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Vcs Notifications&quot;: &quot;VCS 알림&quot;,
+    &quot;Notification.DoNotAsk-Vcs Notifications&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/psych/IdeaProjects/HangHaeCodingStudy/src/Main.kt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="CodingTestKotlinKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CodingTestKotlinKt" />
@@ -145,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722257467621</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="프로그래머스 - 큐를 활용한 기능 개발 풀이">
+      <option name="closed" value="true" />
+      <created>1722259262421</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722259262421</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -156,6 +165,7 @@
     <MESSAGE value="프로그래머스 - 전화번호 목록" />
     <MESSAGE value="하노이의 탑 알고리즘 풀이" />
     <MESSAGE value="프로그래머스 - 기능 개발 풀이" />
-    <option name="LAST_COMMIT_MESSAGE" value="프로그래머스 - 기능 개발 풀이" />
+    <MESSAGE value="프로그래머스 - 큐를 활용한 기능 개발 풀이" />
+    <option name="LAST_COMMIT_MESSAGE" value="프로그래머스 - 큐를 활용한 기능 개발 풀이" />
   </component>
 </project>
